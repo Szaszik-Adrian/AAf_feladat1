@@ -57,7 +57,6 @@ namespace AAf_feladat1
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                List<Student> students = LoadStudents(ofd.FileName);
                 students = LoadStudents(ofd.FileName);
                 dataGridView1.DataSource = null;
                 dataGridView1.AutoGenerateColumns = true;
@@ -78,6 +77,8 @@ namespace AAf_feladat1
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+
             if (!int.TryParse(textBox1.Text.Trim(), out int id))
             {
                 MessageBox.Show("Id csak szám lehet!");
